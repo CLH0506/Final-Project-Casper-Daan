@@ -1,4 +1,3 @@
-print("Hello World!")
 print("SAW for normal lattice")
 import matplotlib.pyplot as plt
 import numpy as np
