@@ -1,6 +1,7 @@
 import random
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
+print("Welcome to the square lattice SAW generator!")
 
 class SquareLattice:
     def __init__(self, size):
