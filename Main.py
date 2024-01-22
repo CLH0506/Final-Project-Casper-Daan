@@ -43,8 +43,8 @@ class SquareLattice:
         plt.plot(x_coords, y_coords, marker='o')
 
         # Set limits and ticks for axes
-        plt.xlim(-0.5 , self.size + 0.5)
-        plt.ylim(-0.5 , self.size+ 0.5)
+        plt.xlim(-0.5 , self.size - 0.5)
+        plt.ylim(-0.5 , self.size - 0.5)
         ax = plt.gca()
         ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
         ax.yaxis.set_major_locator(ticker.MultipleLocator(1))
@@ -54,7 +54,7 @@ class SquareLattice:
         plt.show()
 
 # Usage
-size = 10  # Size of the lattice
+size = 11  # Size of the lattice
 length = 50  # Desired length of the SAW
 lattice = SquareLattice(size)
 lattice.grow_saw(length)
