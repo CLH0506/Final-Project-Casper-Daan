@@ -42,6 +42,7 @@ def plot_triangular_lattice(rows, cols, side_length, max_steps, show_saw=True):
 
     plt.gca().set_aspect('equal', adjustable='box')
     plt.show()
+    plt.suptitle("Self-Avoiding Walk on a triangular lattice")
 
 def self_avoiding_walk(lattice_points, lattice_neighbors, rows, cols, max_steps, side_length):
     # Start from the center of the lattice
@@ -75,7 +76,7 @@ def self_avoiding_walk(lattice_points, lattice_neighbors, rows, cols, max_steps,
             if abs(step_length - side_length) < 1e-10:
                 path.append(next_point)
                 break
-
+            plt.title(f"Lenght of walk: {len(path)}")
     return path
 
 # Example usage
