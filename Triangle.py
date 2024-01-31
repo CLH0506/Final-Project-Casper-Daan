@@ -2,8 +2,10 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 
-def plot_triangular_lattice(rows, cols, side_length, max_steps, show_saw=True):
+def plot_triangular_lattice(rows, max_steps, show_saw=True):
     # Adjust spacing based on the side length of the triangles
+    side_length=rows//10
+    cols=rows
     dx = side_length
     dy = side_length * np.sqrt(3) / 2
 
@@ -32,7 +34,7 @@ def plot_triangular_lattice(rows, cols, side_length, max_steps, show_saw=True):
 
     # Plot the points
     x_coords, y_coords = zip(*lattice_points.values())
-    plt.scatter(x_coords, y_coords)
+    plt.scatter(x_coords, y_coords, s=500//rows^2)
 
     # Perform and plot the self-avoiding walk if required
     if show_saw:
@@ -80,4 +82,4 @@ def self_avoiding_walk(lattice_points, lattice_neighbors, rows, cols, max_steps,
     return path
 
 # Example usage
-plot_triangular_lattice(10, 10, 1, 40)  # 20 steps maximum
+plot_triangular_lattice(10, 40)  #Number of rows and columns, maximum number of steps.
